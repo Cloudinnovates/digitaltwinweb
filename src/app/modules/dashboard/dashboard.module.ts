@@ -7,6 +7,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { GoogleChartsModule } from 'angular-google-charts';
 import { GaugeComponent } from './gauge/gauge.component';
 import { NavbarModule } from '../navbar/navbar.module';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { NavbarModule } from '../navbar/navbar.module';
     CommonModule,
     DashbordRoutingModule,
     GoogleChartsModule,
-    NavbarModule
+    NavbarModule,
+    RouterModule
   ]
 })
 export class DashboardModule { }

@@ -21,6 +21,15 @@ const routes: Routes = [
       }
     ]
   },
+  {
+    path: 'settings',
+    children: [
+      {
+        path: '',
+        loadChildren: './modules/settings/settings.module#SettingsModule',
+      }
+    ]
+  },
 ];
 
 @NgModule({
