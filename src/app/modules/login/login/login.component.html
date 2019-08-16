@@ -1,12 +1,12 @@
 <div class="row justify-content-center mt-5">
     <div class="col-6 mt-5 border border-light rounded-sm p-4">
-        <form #loginForm="ngForm" (ngSubmit)="onSubmit()" >
+        <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
             <div class="form-group">
                 <div class="row">
                     <div class="col-3">
                         <label for="username" class="text-white h4">Username</label>
                     </div>
-                    <div class="col-6 text-danger" [hidden]="usernam.valid || usernam.pristine" >
+                    <div class="col-6 text-danger" [hidden]="usernam.valid || usernam.pristine">
                         Username required.
                     </div>
                 </div>
@@ -18,7 +18,7 @@
             <div class="form-group align-bottom">
                 <div class="row">
                     <div class="col-3 text-white h4">
-                       Password
+                        Password
                     </div>
                     <div class="col-6 text-danger" [hidden]="password.valid || password.pristine">
                         Password required.
@@ -29,8 +29,15 @@
                         [(ngModel)]="login.password" name="password" placeholder="Password" #password="ngModel">
                 </div>
             </div>
+            <div>
+                <ul>
+                    <li class=" text-danger" *ngFor="let e of messages">{{e}}</li>
+                </ul>
+            </div>
             <div class="form-group mt-5">
-                <button type="button" class="btn btn-danger btn-lg btn-block h3" (click)="loginClicked()"  >Log In</button>
+
+                <button type="button" class="btn btn-danger btn-lg btn-block h3" (click)="loginClicked()">Log
+                    In</button>
             </div>
         </form>
     </div>

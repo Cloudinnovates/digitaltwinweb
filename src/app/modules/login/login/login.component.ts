@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Login } from 'src/app/models';
 import { UserService } from 'src/app/services/user.service';
 import { Router } from '@angular/router';
+import { getError } from 'src/app/helpers/error.details';
 
 @Component({
   selector: 'app-login',
@@ -11,6 +12,7 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
 
   login = new Login();
+  messages: string[] = [];
 
   constructor(private userService: UserService, private router: Router) { }
 
@@ -18,12 +20,16 @@ export class LoginComponent implements OnInit {
   }
 
   loginClicked(){
-        this.userService.login(this.login.username, this.login.password).subscribe(result => {
+    this.messages = [];
+
+    this.userService.login(this.login.username, this.login.password).subscribe(result => {
           this.router.navigate(['/dashboard']);
         },
         error => {
           if(error.errors) {
-
+            this.messages = getError(error.errors);
+          } else {
+            this.messages.push('Something went wrong. Please try again later.');
           }
         });
   }
