@@ -1,0 +1,40 @@
+<div class="container">
+    <svg id="t" width="140" height="130" fill="red" transform='rotate(-90)' viewBox="0 0 140 340">
+        <svg y="20">
+            <rect width="70" height="20" y="0" fill="#ee1c25">
+            </rect>
+            <rect width="70" height="20" y="20" fill="#f26724">
+            </rect>
+            <rect width="70" height="20" y="40" fill="#f7c709">
+            </rect>
+            <rect width="70" height="20" y="60" fill="#f5ed1c">
+            </rect>
+            <rect width="70" height="20" y="80" fill="#b5d13c">
+            </rect>
+            <rect width="70" height="20" y="100" fill="#84c341">
+            </rect>
+            <rect width="70" height="20" y="120" fill="#4db749">
+            </rect>
+            <rect width="70" height="20" y="140" fill="#34aa49">
+            </rect>
+            <rect width="70" height="20" y="160" fill="#22b46b">
+            </rect>
+            <rect width="70" height="20" y="180" fill="#0ab8b6">
+            </rect>
+            <rect width="70" height="20" y="200" fill="#4690cd">
+            </rect>
+            <rect width="70" height="20" y="220" fill="#3852a6">
+            </rect>
+            <rect width="70" height="20" y="240" fill="#5a51a2">
+            </rect>
+            <rect width="70" height="20" y="260" fill="#63459d">
+            </rect>
+            <rect width="70" height="20" y="280" fill="#462c83">
+            </rect>
+        </svg>
+        <svg x="70" [attr.y]="phLevelToHeight" width="70" height="40">
+            <polygon points="0,20 17,40 70,40 70,0 17,0" style="fill:lime;stroke:purple;stroke-width:1;" />
+            <text x="20" y="30" fill="white" style="font-size:35px;font-weight: bold">{{phLevel}}</text>
+        </svg>
+    </svg>
+</div>

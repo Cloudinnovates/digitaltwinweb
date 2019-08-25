@@ -1,6 +1,86 @@
-<google-chart #googlechart
-[title]="chart.title"
-[type]="chart.type"
-[data]="chart.data"
-[options]="chart.options">
-</google-chart>
+<div class="row no-gutters h-100">
+    <div class="col no-gutters d-flex align-content-between  flex-wrap">
+        <div class="row no-gutters" style="height: 33%;width: 100%">
+            <div class="col no-gutters" #onecell>
+                <div class="card d-inline-block m-1 position-relative border border-info" style="width: 95%;height: 92%;">
+                    <div class="card-header p-0 text-center h5 gauge-title bg-info text-white">
+                        Progress
+                    </div>
+                    <div class="card-body d-flex card-body-padding-modify">
+                        <google-chart class="mx-auto"   style="width: 90%; height: 20%;" [type]="chart1.type" [data]="chart1.data"
+                            [options]="chart1.options" >
+                        </google-chart>
+                    </div>
+                    <span class="badge badge-primary position-absolute mb-2 mr-2 gauge-place-size font-weight-bold">15.5</span>
+                </div>
+            </div>
+            <div class="col no-gutters" >
+                <div class="card d-inline-block  m-1 position-relative border-info" style="width: 95%;height: 92%;">
+                    <div class="card-header p-0 text-center h5 gauge-title bg-info text-white">
+                        Flow rate
+                    </div>
+                    <div class="card-body d-flex card-body-padding-modify">
+                        <google-chart class="mx-auto"  style="width: 90%; height: 20%;"  [type]="chart2.type" [data]="chart2.data" [options]="chart1.options"
+                            >
+                        </google-chart>
+                        <span class="badge badge-primary position-absolute mb-2 mr-2  gauge-place-size  font-weight-bold">15.5</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row no-gutters" style="height: 33%;width: 100%">
+            <div class="col no-gutters" >
+                <div class="card d-inline-block  m-1 position-relative border-info" style="width: 95%;height: 92%;">
+                    <div class="card-header p-0 text-center h5 gauge-title bg-info text-white">
+                        Water pressure
+                    </div>
+                    <div class="card-body d-flex card-body-padding-modify">
+                        <google-chart  class="mx-auto"  style="width: 90%; height: 20%;"   [type]="chart3.type" [data]="chart3.data" [options]="chart1.options"
+                            >
+                        </google-chart>
+                        <span class="badge badge-primary position-absolute mb-2 mr-2 gauge-place-size  font-weight-bold">15.5</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col no-gutters" >
+                <div class="card d-inline-block  m-1 position-relative border-info"
+                style="width: 95%;height: 92%;">
+                    <div class="card-body d-flex card-body-padding-modify">
+                        <!-- <app-phindicator style="height: 80%" ></app-phindicator> -->
+                        <span class="badge badge-primary position-absolute  mb-2 mr-2  gauge-place-size "> PH level 15.5</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row no-gutters" style="height: 33%;width: 100%">
+            <div class="col no-gutters" >
+                <div class="card d-inline-block  m-1 position-relative border-info"
+                style="width: 95%;height: 92%;">
+                    <div class="card-header p-0 text-center  h5 gauge-title bg-info text-white">
+                        Pertility Rate
+                    </div>
+                    <div class="card-body d-flex flex-column align-content-stretch card-body-padding-modify">
+                        <div class="d-flex align-content-around  flex-wrap" style="width: 95%;height: 60%;">
+                            <div class="d-block" style="height: 25%;width: 98%">
+                                <span>N:</span><meter min="0" max="100" low="25" high="75" optimum="50"
+                                    value="50"></meter>
+                            </div>
+                            <div class="d-block" style="height: 25%;width: 98%">
+                                <span>P:</span><meter min="0" max="100" low="25" high="75" optimum="50"
+                                    value="50"></meter>
+                            </div>
+                            <div class="d-block" style="height: 25%;width: 98%">
+                                <span>K:</span><meter min="0" max="100" low="25" high="75" optimum="50"
+                                    value="50"></meter>
+                            </div>
+                            <div class="d-block" style="height: 25%;width: 98%">
+                                <span>Y:</span><meter min="0" max="100" low="25" high="75" optimum="50"
+                                    value="50"></meter>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

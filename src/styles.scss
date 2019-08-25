@@ -1,18 +1,50 @@
+@import "node_modules/bootstrap/scss/bootstrap";
+
 /* You can add global styles to this file, and also import other style files */
+
+$body-back-color: #fbfcfe;
+
 body,
 html
  {
     width: 100%;
     height: 100%;
+    background-color: $body-back-color;
 }
 
-body {
-    background-color: #262626 !important;
+.main-wrapper {
+    height: 100vh !important;
 }
-html {
-    background-color: #262626 !important;
 
+app-dashboard {
+    height: 100%;
+    widows: 100%;
+    display: block;
+    background-color: $body-back-color;
 }
-.container-fluid{
-    padding: 0 !important;
+
+app-gauge {
+    height: 100%;
+    widows: 100%;
+    display: block;
+    background-color: $body-back-color;
+}
+
+app-graph {
+    height: 100%;
+    widows: 100%;
+    display: block;
+    background-color: $body-back-color; 
+}
+
+
+app-water-pump {
+    height: 98%;
+    widows: 100%;
+    display: block;
+    background-color: $body-back-color; 
+}
+
+.card-body-padding-modify {
+    padding: .5vw !important; 
 }

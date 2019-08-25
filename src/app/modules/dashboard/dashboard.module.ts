@@ -8,10 +8,11 @@ import { GoogleChartsModule } from 'angular-google-charts';
 import { GaugeComponent } from './gauge/gauge.component';
 import { NavbarModule } from '../navbar/navbar.module';
 import { RouterModule } from '@angular/router';
+import { PHIndicatorComponent } from './phindicator/phindicator.component';
 
 
 @NgModule({
-  declarations: [WaterPumpComponent, DataGraphComponent, DashboardComponent, GaugeComponent],
+  declarations: [WaterPumpComponent, DataGraphComponent, DashboardComponent, GaugeComponent, PHIndicatorComponent],
   imports: [
     CommonModule,
     DashbordRoutingModule,

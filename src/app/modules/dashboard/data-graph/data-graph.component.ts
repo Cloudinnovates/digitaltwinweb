@@ -47,7 +47,6 @@ export class DataGraphComponent implements OnInit {
           italic: true
        },
       },
-      backgroundColor: '#262626',
       colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6'],
    };
    width = 550;
